@@ -1365,6 +1365,7 @@
       }
 
       /* PDF Download Banner */
+      /* PDF Download Banner */
       .pdf-banner {
         position: fixed;
         top: 0;
@@ -1383,16 +1384,37 @@
         align-items: center;
         justify-content: center;
         gap: 1rem;
-        transition: var(--transition);
+        transition: transform 0.3s ease, opacity 0.3s ease;
         box-shadow: 0 2px 20px rgba(45, 74, 62, 0.3);
+        overflow: hidden; /* keep ::before contained */
       }
 
-      .pdf-banner:hover {
+      /* Hover gradient overlay */
+      .pdf-banner::before {
+        content: "";
+        position: absolute;
+        inset: 0;
         background: linear-gradient(
           135deg,
           var(--color-accent-light) 0%,
           var(--color-accent) 100%
         );
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        /* z-index 0, NOT -1 — so it sits above the background
+     but below the children */
+        z-index: 0;
+      }
+
+      .pdf-banner:hover::before {
+        opacity: 1;
+      }
+
+      /* All children must sit above the ::before */
+      .pdf-banner-content,
+      .pdf-banner-close {
+        position: relative;
+        z-index: 1;
       }
 
       .pdf-banner-content {
@@ -1632,7 +1654,6 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
-      <button class="mobile-menu-close" onclick="toggleMobileMenu()">×</button>
       <a href="#" onclick="navigateTo('home'); toggleMobileMenu();">Home</a>
       <a href="#" onclick="navigateTo('category', 'art'); toggleMobileMenu();"
         >Kunst</a
@@ -2804,19 +2825,7 @@
           banner.style.display = "none";
           document.getElementById("nav").classList.add("banner-hidden");
         }, 300);
-        localStorage.setItem("pdfBannerClosed", "true");
       }
-
-      // Check if user already closed banner
-      document.addEventListener("DOMContentLoaded", () => {
-        if (localStorage.getItem("pdfBannerClosed") === "true") {
-          const banner = document.getElementById("pdfBanner");
-          if (banner) {
-            banner.style.display = "none";
-            document.getElementById("nav").classList.add("banner-hidden");
-          }
-        }
-      });
     </script>
   </body>
 </html>
