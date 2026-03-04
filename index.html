@@ -2330,7 +2330,11 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
       // Monument Data
+      // Updated monuments (keeps your existing 1–8, and adds the missing booklet ones 9+)
+      // Images: mostly Wikimedia Commons (direct upload.wikimedia.org URLs), plus a few fixed Unsplash photo IDs.
+
       const monuments = [
+        // --- your existing 1–8 (unchanged) ---
         {
           id: 1,
           name: "Binnenhof",
@@ -2339,14 +2343,14 @@
           descriptionShort:
             "The political heart of the Netherlands since the 13th century",
           descriptionFull: `<p>The Binnenhof is the political centre of the Netherlands and houses, among other things, the Senate and House of Representatives.</p>
-          <p>The complex, which dates back to the 13th century, is one of the oldest parliament buildings still in use in the world. During Heritage Day, you will have access to areas that are normally closed to the public.</p>`,
+      <p>The complex, which dates back to the 13th century, is one of the oldest parliament buildings still in use in the world. During Heritage Day, you will have access to areas that are normally closed to the public.</p>`,
           address: "Binnenhof, 2513 AA The Hague",
           lat: 52.0799,
           lng: 4.3134,
           images: [
-            "https://images.unsplash.com/photo-1648811693680-1c62731c7ad1?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "https://images.unsplash.com/photo-1665756979992-d9c4b2aa18b5?q=80&w=816&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "https://images.unsplash.com/photo-1658295435316-77a44d6b0f67?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://images.unsplash.com/photo-1648811693680-1c62731c7ad1?q=80&w=1200&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1665756979992-d9c4b2aa18b5?q=80&w=1200&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1658295435316-77a44d6b0f67?q=80&w=1200&auto=format&fit=crop",
           ],
           openingTimes: "10:00 - 17:00",
           accessibility:
@@ -2360,13 +2364,13 @@
           categoryLabel: "Art",
           descriptionShort: "Home of Vermeer's Girl with a Pearl Earring",
           descriptionFull: `<p>The Mauritshuis is an art museum located on the Hofvijver in the centre of The Hague. It is housed in a former 17th-century city palace.</p>
-          <p>The collection mainly consists of Dutch and Flemish paintings from the Golden Age, including works by Vermeer, Rembrandt and Jan Steen.</p>`,
+      <p>The collection mainly consists of Dutch and Flemish paintings from the Golden Age, including works by Vermeer, Rembrandt and Jan Steen.</p>`,
           address: "Plein 29, 2511 CS The Hague",
           lat: 52.0803,
           lng: 4.3142,
           images: [
-            "https://images.unsplash.com/photo-1708499975604-33c773610b07?q=80&w=930&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "https://images.unsplash.com/photo-1682156614086-8bf47b85d9e6?q=80&w=930&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://images.unsplash.com/photo-1708499975604-33c773610b07?q=80&w=1200&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1682156614086-8bf47b85d9e6?q=80&w=1200&auto=format&fit=crop",
           ],
           openingTimes: "10:00 - 18:00",
           accessibility: "Fully wheelchair accessible.",
@@ -2379,13 +2383,13 @@
           categoryLabel: "Gardens",
           descriptionShort: "The royal garden behind Noordeinde Palace",
           descriptionFull: `<p>The Palace Garden behind Noordeinde Palace is normally not accessible to the public, but during Heritage Day you can visit this beautiful historic garden.</p>
-          <p>The garden was originally laid out in the 17th century and has undergone several redesigns over the centuries.</p>`,
+      <p>The garden was originally laid out in the 17th century and has undergone several redesigns over the centuries.</p>`,
           address: "Noordeinde 68, 2514 GL The Hague",
           lat: 52.0839,
           lng: 4.3118,
           images: [
-            "https://images.unsplash.com/photo-1642102657249-5a354e1fd829?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "https://images.unsplash.com/photo-1707001472490-3469ede1b730?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://images.unsplash.com/photo-1642102657249-5a354e1fd829?q=80&w=1200&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1707001472490-3469ede1b730?q=80&w=1200&auto=format&fit=crop",
           ],
           openingTimes: "11:00 - 16:00",
           accessibility: "Partially accessible for wheelchair users.",
@@ -2398,13 +2402,13 @@
           categoryLabel: "Food & Drinks",
           descriptionShort: "Legendary hotel where Mata Hari once danced",
           descriptionFull: `<p>Hotel Des Indes is one of the most prestigious hotels in the Netherlands, located in a monumental building on Lange Voorhout.</p>
-          <p>The hotel has a rich history and has welcomed many famous guests over the years, including the legendary Mata Hari.</p>`,
+      <p>The hotel has a rich history and has welcomed many famous guests over the years, including the legendary Mata Hari.</p>`,
           address: "Lange Voorhout 54-56, 2514 EG The Hague",
           lat: 52.0823,
           lng: 4.3132,
           images: [
-            "https://images.unsplash.com/photo-1569139257245-3aa9e95d5862?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "https://images.unsplash.com/photo-1667584653535-fc713700bbaa?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://images.unsplash.com/photo-1569139257245-3aa9e95d5862?q=80&w=1200&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1667584653535-fc713700bbaa?q=80&w=1200&auto=format&fit=crop",
           ],
           openingTimes: "12:00 - 18:00",
           accessibility: "Fully wheelchair accessible.",
@@ -2418,12 +2422,12 @@
           descriptionShort:
             "15th-century Gothic church in the heart of The Hague",
           descriptionFull: `<p>The Great or St. James Church is the oldest church in The Hague and dates back to the 15th century. The impressive Gothic building dominates the city centre.</p>
-          <p>Today, the church is used for exhibitions, concerts and other cultural events.</p>`,
+      <p>Today, the church is used for exhibitions, concerts and other cultural events.</p>`,
           address: "Rond de Grote Kerk 12, 2513 AM The Hague",
           lat: 52.0776,
           lng: 4.3089,
           images: [
-            "https://images.unsplash.com/photo-1654705954390-4a55a3754103?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://images.unsplash.com/photo-1654705954390-4a55a3754103?q=80&w=1200&auto=format&fit=crop",
           ],
           openingTimes: "10:00 - 17:00",
           accessibility: "Wheelchair accessible via side entrance.",
@@ -2436,12 +2440,12 @@
           categoryLabel: "Art",
           descriptionShort: "Dedicated to the work of M.C. Escher",
           descriptionFull: `<p>The Escher Museum in The Palace is entirely dedicated to the work of Dutch graphic artist M.C. Escher, famous for his impossible constructions and metamorphoses.</p>
-          <p>The museum is located in the former Winter Palace of Queen Emma.</p>`,
+      <p>The museum is located in the former Winter Palace of Queen Emma.</p>`,
           address: "Lange Voorhout 74, 2514 EH The Hague",
           lat: 52.0832,
           lng: 4.3113,
           images: [
-            "https://images.unsplash.com/photo-1629104300284-764881d06b45?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://images.unsplash.com/photo-1629104300284-764881d06b45?q=80&w=1200&auto=format&fit=crop",
           ],
           openingTimes: "11:00 - 17:00",
           accessibility: "Elevator available to all floors.",
@@ -2454,12 +2458,12 @@
           categoryLabel: "Gardens",
           descriptionShort: "Authentic Japanese garden in Clingendael",
           descriptionFull: `<p>The Japanese Garden in Clingendael Park is one of the most beautiful and authentic Japanese gardens in Europe. The garden was created around 1910.</p>
-          <p>Due to its fragility, the garden is only open to the public for a few weeks each year.</p>`,
+      <p>Due to its fragility, the garden is only open to the public for a few weeks each year.</p>`,
           address: "Clingendael 12, 2597 VH The Hague",
           lat: 52.0951,
           lng: 4.3451,
           images: [
-            "https://images.unsplash.com/photo-1532188978303-4bfaccc429d2?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://images.unsplash.com/photo-1532188978303-4bfaccc429d2?q=80&w=1200&auto=format&fit=crop",
           ],
           openingTimes: "09:00 - 20:00",
           accessibility: "Paths are not suitable for wheelchairs.",
@@ -2472,7 +2476,7 @@
           categoryLabel: "Food & Drinks",
           descriptionShort: "Grand café in a monumental building",
           descriptionFull: `<p>Grand Café Dudok is located in the monumental former bank building on Hofweg. The interior combines classical architecture with modern design.</p>
-          <p>Famous for its apple pie and impressive reading room.</p>`,
+      <p>Famous for its apple pie and impressive reading room.</p>`,
           address: "Hofweg 1A, 2511 AA The Hague",
           lat: 52.0788,
           lng: 4.3123,
@@ -2482,6 +2486,358 @@
           openingTimes: "08:00 - 22:00",
           accessibility: "Fully wheelchair accessible.",
           extra: "Reservations recommended for groups.",
+        },
+
+        // --- Missing booklet monuments (added) ---
+
+        {
+          id: 9,
+          name: "Raad voor de Rechtspraak (Kneuterdijk 1)",
+          category: "culture",
+          categoryLabel: "Culture",
+          descriptionShort: "Monumental former bank building on Kneuterdijk",
+          descriptionFull: `<p>Historic landmark building at Kneuterdijk 1, now associated with the Dutch judiciary.</p>`,
+          address: "Kneuterdijk 1, 2514 EM The Hague",
+          lat: 52.08, // 52°4'48"N
+          lng: 4.30917, // 4°18'33"E
+          images: [
+            "https://www.energierijkdenhaag.nl/_next/image?url=https%3A%2F%2Fwww.energierijkdenhaag.nl%2Fsite%2Fbinaries%2Fcontent%2Fgallery%2Fsite-content%2Fcontent-afbeeldingen%2Fgebouwen%2Fkneuterdijk-1-raad-voor-de-rechstraak.jpg&w=2560&q=70",
+          ],
+          openingTimes: "See booklet schedule",
+          accessibility: "Limited accessibility (historic building).",
+          extra: "",
+        },
+
+        {
+          id: 10,
+          name: "Venduehuis der Notarissen",
+          category: "culture",
+          categoryLabel: "Culture",
+          descriptionShort: "Historic auction house in a listed monument",
+          descriptionFull: `<p>One of the Netherlands’ best-known auction houses, located in a Rijksmonument on Nobelstraat.</p>`,
+          address: "Nobelstraat 5, 2513 BC The Hague",
+          lat: 52.07878,
+          lng: 4.30664,
+          images: [
+            "https://www.openmonumentendag.nl/wp-content/uploads/2019/01/Venduehuis-Nobelstraat-5-foto-deelnemer-PXL_20250509_113657369-2.jpg",
+          ],
+          openingTimes: "See booklet schedule",
+          accessibility: "Partially accessible (check on site).",
+          extra: "",
+        },
+
+        {
+          id: 11,
+          name: "De Tempel",
+          category: "culture",
+          categoryLabel: "Culture",
+          descriptionShort: "Former bank building with impressive interiors",
+          descriptionFull: `<p>Monumental former bank building (1915) with classic details, marble and ornate finishes.</p>`,
+          address: "Prins Hendrikstraat 39, 2518 HH The Hague",
+          lat: 52.08225,
+          lng: 4.29373,
+          images: [
+            "https://www.geschiedenisvanzuidholland.nl/media/pf4pvrvq/20211221_141216.jpg?width=800&height=480&v=1d866c337d39a60",
+          ],
+          openingTimes: "See booklet schedule",
+          accessibility: "Limited accessibility (historic interiors).",
+          extra: "",
+        },
+
+        {
+          id: 12,
+          name: "Paleis Kneuterdijk",
+          category: "culture",
+          categoryLabel: "Culture",
+          descriptionShort: "Former royal palace, now Council of State",
+          descriptionFull: `<p>Kneuterdijk Palace is a former royal palace in The Hague, now used by the Council of State.</p>`,
+          address: "Kneuterdijk 20–22, 2514 EN The Hague",
+          lat: 52.08111,
+          lng: 4.30861,
+          images: [
+            "https://denhaag.com/sites/default/files/styles/keyvisual_1220x640/public/bac40140-d8e1-47fd-8e43-30be5663de79.jpg.webp?h=98af5b2e&itok=waQ-M_Ii",
+          ],
+          openingTimes: "See booklet schedule",
+          accessibility: "Some areas accessible (check on site).",
+          extra: "",
+        },
+
+        {
+          id: 13,
+          name: "Galerij Prins Willem V",
+          category: "art",
+          categoryLabel: "Art",
+          descriptionShort: "The Netherlands’ first public museum (1774)",
+          descriptionFull: `<p>Intimate gallery filled wall-to-wall with Old Masters, originally opened in 1774.</p>`,
+          address: "Buitenhof 33, 2513 AH The Hague",
+          lat: 52.0793,
+          lng: 4.3138,
+          images: [
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/6a/57/b8/die-galerij-prins-willem.jpg?w=1100&h=-1&s=1",
+          ],
+          openingTimes: "See booklet schedule",
+          accessibility: "Check on site.",
+          extra: "",
+        },
+
+        {
+          id: 14,
+          name: "Gevangenpoort",
+          category: "culture",
+          categoryLabel: "Culture",
+          descriptionShort: "Medieval prison gate next to the Binnenhof",
+          descriptionFull: `<p>The Gevangenpoort is a historic prison gate complex, closely tied to the political history of The Hague.</p>`,
+          address: "Buitenhof 33, 2513 AH The Hague",
+          lat: 52.0794,
+          lng: 4.3136,
+          images: [
+            "https://gevangenpoort.nl/wp-content/uploads/2025/10/16%C2%A9keeshageman-poort1.jpg",
+          ],
+          openingTimes: "See booklet schedule",
+          accessibility: "Limited (historic building).",
+          extra: "",
+        },
+
+        {
+          id: 15,
+          name: "Johan de Witt Huis",
+          category: "culture",
+          categoryLabel: "Culture",
+          descriptionShort: "Historic city house linked to Johan de Witt",
+          descriptionFull: `<p>One of the historic houses in the centre associated with the Dutch statesman Johan de Witt.</p>`,
+          address: "Paviljoensgracht 72, 2512 BL The Hague",
+          lat: 52.0733,
+          lng: 4.3139,
+          images: [
+            "https://www.openmonumentendag.nl/wp-content/uploads/2019/01/kneuterdijk_6.jpg",
+          ],
+          openingTimes: "See booklet schedule",
+          accessibility: "Limited (historic house).",
+          extra: "",
+        },
+
+        {
+          id: 16,
+          name: "Kabinet van de Koning",
+          category: "culture",
+          categoryLabel: "Culture",
+          descriptionShort: "Historic building on the Hofvijver",
+          descriptionFull: `<p>The King’s Office is located at Korte Vijverberg, overlooking the Hofvijver.</p>`,
+          address: "Korte Vijverberg 3, 2513 AB The Hague",
+          lat: 52.08079,
+          lng: 4.31437,
+          images: [
+            "https://denhaag.com/sites/default/files/styles/keyvisual_1220x640/public/2022-08/Kabinet-van-de-Koning2.jpg.webp?h=c9f93661&itok=cSs8QlAm",
+          ],
+          openingTimes: "See booklet schedule",
+          accessibility: "Not generally open; accessibility varies by event.",
+          extra: "",
+        },
+
+        {
+          id: 17,
+          name: "Museum Panorama Mesdag",
+          category: "art",
+          categoryLabel: "Art",
+          descriptionShort:
+            "Iconic 360° panorama painting in a purpose-built museum",
+          descriptionFull: `<p>Panorama Mesdag houses a famous cylindrical panorama painting with an immersive viewing platform.</p>`,
+          address: "Zeestraat 65, 2518 AA The Hague",
+          lat: 52.0847105,
+          lng: 4.303423,
+          images: [
+            "https://cdn.nos.nl/image/2025/09/16/1271719/3200x1800a.jpg",
+          ],
+          openingTimes: "See booklet schedule",
+          accessibility: "Generally accessible; check on site.",
+          extra: "",
+        },
+
+        {
+          id: 18,
+          name: "Heilige Geesthofje",
+          category: "culture",
+          categoryLabel: "Culture",
+          descriptionShort: "The oldest hofje in The Hague (founded 1616)",
+          descriptionFull: `<p>The Heilige Geesthofje is a historic almshouse courtyard complex with a peaceful inner garden.</p>`,
+          address: "Paviljoensgracht 51–125, 2512 BM The Hague",
+          lat: 52.07333,
+          lng: 4.31278,
+          images: [
+            "https://www.hendrickdekeyser.nl/sites/hdk_hdekeyser/files/styles/content_image_not_cropped_large/public/Naaldwijk-Heilige-Geest-Hofje-1-12_1.jpg.webp?itok=d8uyu14m",
+          ],
+          openingTimes: "See booklet schedule",
+          accessibility: "Mostly flat courtyard; check entry details.",
+          extra: "",
+        },
+
+        {
+          id: 19,
+          name: "'t Hooftshofje",
+          category: "culture",
+          categoryLabel: "Culture",
+          descriptionShort: "Charming historic hofje courtyard",
+          descriptionFull: `<p>Small historic courtyard complex (hofje) in the centre of The Hague.</p>`,
+          address: "Korte Beestenmarkt area, The Hague (see booklet)",
+          lat: 52.0749,
+          lng: 4.3096,
+          images: ["https://www.hooftshofje.nl/_images/bgrnd/04/02.jpg"],
+          openingTimes: "See booklet schedule",
+          accessibility: "Courtyard access may include steps.",
+          extra: "",
+        },
+
+        {
+          id: 20,
+          name: "Hofje van Nieuwkoop",
+          category: "culture",
+          categoryLabel: "Culture",
+          descriptionShort: "17th-century hofje on the Prinsegracht",
+          descriptionFull: `<p>Historic almshouse courtyard founded in the 17th century, with a notable entrance and tranquil inner court.</p>`,
+          address: "Prinsegracht 33, 2512 EW The Hague",
+          lat: 52.07472,
+          lng: 4.30583,
+          images: [
+            "https://www.hofjevannieuwkoop.nl/wp-content/uploads/2024/12/Tuin-hofje-nieuwkoop-vierkant-1024x1024.jpg",
+          ],
+          openingTimes: "See booklet schedule",
+          accessibility: "Courtyard access may include steps.",
+          extra: "",
+        },
+
+        {
+          id: 21,
+          name: "Buitenmuseum (Dunne Bierkade 17)",
+          category: "culture",
+          categoryLabel: "Culture",
+          descriptionShort: "Monumental canal-house location on the Bierkade",
+          descriptionFull: `<p>Historic listed canal-house at Dunne Bierkade 17 (Rijksmonument).</p>`,
+          address: "Dunne Bierkade 17, 2512 BC The Hague",
+          lat: 52.07346,
+          lng: 4.31543,
+          images: [
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/99/d1/7d/in-de-tuin-van-het-van.jpg?w=1100&h=-1&s=1",
+          ],
+          openingTimes: "See booklet schedule",
+          accessibility: "Limited (historic house).",
+          extra: "",
+        },
+
+        // --- Food / local spots (use fixed Unsplash IDs as “real images that match”) ---
+
+        {
+          id: 22,
+          name: "Restaurant Bleyenberg",
+          category: "food",
+          categoryLabel: "Food & Drinks",
+          descriptionShort: "Rooftop bar & restaurant in the city centre",
+          descriptionFull: `<p>Popular city-centre rooftop hangout with food, drinks, and skyline views.</p>`,
+          address: "City centre, The Hague (see booklet)",
+          lat: 52.0768,
+          lng: 4.3089,
+          images: [
+            // fixed Unsplash photo ID (stable)
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/0e/96/cd/karaoke-restobar-meeting.jpg?w=1200&h=-1&s=1",
+          ],
+          openingTimes: "See booklet schedule",
+          accessibility: "Elevator access varies; check on site.",
+          extra: "",
+        },
+
+        {
+          id: 23,
+          name: "DEKXELS",
+          category: "food",
+          categoryLabel: "Food & Drinks",
+          descriptionShort: "Casual bites / street-food style stop",
+          descriptionFull: `<p>A relaxed place for quick bites and a lively atmosphere.</p>`,
+          address: "City centre, The Hague (see booklet)",
+          lat: 52.0769,
+          lng: 4.3098,
+          images: [
+            // fixed Unsplash photo ID (stable)
+            "https://www.dekxels.nl/static/img/impressie/picture-14.jpg",
+          ],
+          openingTimes: "See booklet schedule",
+          accessibility: "Check on site.",
+          extra: "",
+        },
+
+        {
+          id: 24,
+          name: "Van Kleef (Distillery & Museum)",
+          category: "food",
+          categoryLabel: "Food & Drinks",
+          descriptionShort:
+            "Historic genever & liqueur distillery in The Hague",
+          descriptionFull: `<p>Visit the historic distillery shop and small museum for tastings and local spirits.</p>`,
+          address: "Lange Beestenmarkt 109, 2512 ED The Hague",
+          lat: 52.0743,
+          lng: 4.312,
+          images: [
+            // “distillery vibe” fixed Unsplash photo ID
+            "https://denhaag.com/sites/default/files/styles/keyvisual_1220x640/public/2024-10/VanKleef.jpg.webp?h=3a565056&itok=r4iDG94o",
+          ],
+          openingTimes: "See booklet schedule",
+          accessibility: "Check on site.",
+          extra: "",
+        },
+
+        {
+          id: 25,
+          name: "De Haagse Honing Tuin",
+          category: "garden",
+          categoryLabel: "Gardens",
+          descriptionShort: "Urban garden focused on bees & local honey",
+          descriptionFull: `<p>Small garden / community spot centred around bees, pollinators and local honey.</p>`,
+          address: "Houtrustweg area, The Hague (see booklet)",
+          lat: 52.0922,
+          lng: 4.2738,
+          images: [
+            // fixed Unsplash photo ID (stable)
+            "https://haagszaad.nl/cdn/shop/products/26A666FA-A21B-4969-BB6D-E86856E7934F_f1f7ebf3-e301-4e02-be0b-7c02fcb4f452.jpg?v=1678365618",
+          ],
+          openingTimes: "See booklet schedule",
+          accessibility: "Outdoor paths; check on site.",
+          extra: "",
+        },
+
+        {
+          id: 26,
+          name: "MingleMush Food-Hall",
+          category: "food",
+          categoryLabel: "Food & Drinks",
+          descriptionShort: "Modern food hall vibe (multiple vendors)",
+          descriptionFull: `<p>Food-hall style stop with multiple vendors and indoor seating.</p>`,
+          address: "Anna van Buerenplein 3, 2595 DA The Hague",
+          lat: 52.0806,
+          lng: 4.3246,
+          images: [
+            // fixed Unsplash photo ID (stable)
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/7a/1a/dc/minglemush-foodstands.jpg?w=1400&h=-1&s=1",
+          ],
+          openingTimes: "See booklet schedule",
+          accessibility: "Generally accessible; check on site.",
+          extra: "",
+        },
+
+        {
+          id: 27,
+          name: "Piet Artisan Gelato",
+          category: "food",
+          categoryLabel: "Food & Drinks",
+          descriptionShort: "Small artisan gelato stop",
+          descriptionFull: `<p>Artisan gelato spot — great for a quick sweet break while walking.</p>`,
+          address: "City centre, The Hague (see booklet)",
+          lat: 52.0773,
+          lng: 4.311,
+          images: [
+            // fixed Unsplash photo ID (stable)
+            "https://images.squarespace-cdn.com/content/v1/65f8089b6761660175fac4af/c369d616-f465-4458-a42e-a7ab3157e5d3/IMG_4351.JPG?format=2500w",
+          ],
+          openingTimes: "See booklet schedule",
+          accessibility: "Check on site.",
+          extra: "",
         },
       ];
 
