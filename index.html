@@ -1183,6 +1183,8 @@
       /* Back button */
       .back-btn {
         display: inline-flex;
+        opacity: 0;
+        visibility: none;
         align-items: center;
         gap: 0.5rem;
         color: var(--color-text-muted);
@@ -1218,6 +1220,7 @@
 
       @media (max-width: 992px) {
         .nav {
+          margin-top: -10px;
           padding: 1.5rem 2rem;
         }
 
@@ -1582,7 +1585,7 @@
           </svg>
         </div>
         <div class="pdf-banner-text">
-          <span class="pdf-banner-title">Download the Official Booklet</span>
+          <span class="pdf-banner-title">Download Our Booklet!</span>
           <span class="pdf-banner-subtitle"
             >Print-friendly PDF with all monuments, maps & schedules</span
           >
@@ -1654,22 +1657,21 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
-      <a href="#" onclick="navigateTo('home'); toggleMobileMenu();">Home</a>
       <a href="#" onclick="navigateTo('category', 'art'); toggleMobileMenu();"
-        >Kunst</a
+        >Art</a
       >
       <a href="#" onclick="navigateTo('category', 'food'); toggleMobileMenu();"
-        >Eten</a
+        >Food & Drinks</a
       >
       <a
         href="#"
         onclick="navigateTo('category', 'garden'); toggleMobileMenu();"
-        >Tuinen</a
+        >Garden</a
       >
       <a
         href="#"
         onclick="navigateTo('category', 'culture'); toggleMobileMenu();"
-        >Cultuur</a
+        >Culture</a
       >
       <a href="#" onclick="navigateTo('map'); toggleMobileMenu();">Kaart</a>
     </div>
@@ -2656,8 +2658,8 @@
         {
           id: 18,
           name: "Heilige Geesthofje",
-          category: "culture",
-          categoryLabel: "Culture",
+          category: "garden",
+          categoryLabel: "Gardens",
           descriptionShort: "The oldest hofje in The Hague (founded 1616)",
           descriptionFull: `<p>The Heilige Geesthofje is a historic almshouse courtyard complex with a peaceful inner garden.</p>`,
           address: "Paviljoensgracht 51–125, 2512 BM The Hague",
@@ -2674,8 +2676,8 @@
         {
           id: 19,
           name: "'t Hooftshofje",
-          category: "culture",
-          categoryLabel: "Culture",
+          category: "garden",
+          categoryLabel: "Gardens",
           descriptionShort: "Charming historic hofje courtyard",
           descriptionFull: `<p>Small historic courtyard complex (hofje) in the centre of The Hague.</p>`,
           address: "Korte Beestenmarkt area, The Hague (see booklet)",
@@ -2690,8 +2692,8 @@
         {
           id: 20,
           name: "Hofje van Nieuwkoop",
-          category: "culture",
-          categoryLabel: "Culture",
+          category: "garden",
+          categoryLabel: "Gardens",
           descriptionShort: "17th-century hofje on the Prinsegracht",
           descriptionFull: `<p>Historic almshouse courtyard founded in the 17th century, with a notable entrance and tranquil inner court.</p>`,
           address: "Prinsegracht 33, 2512 EW The Hague",
